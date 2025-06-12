@@ -15,7 +15,7 @@
     color: white;
 }
 
-#button-box {
+.button-box {
     text-align: center;
 }
 
@@ -199,6 +199,13 @@ nav {
   grid-row: 5 / 8;
   box-shadow: 5px 5px 10px #0b2545;
 }
+
+.card-img:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px #0b2545;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
