@@ -177,3 +177,19 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+/* force a uniform size and crop off excess */
+.card-img {
+  width: 100%;
+  height: auto;        /* pick whatever height works for your design */
+  object-fit: cover;    /* scale & crop to fill the box */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
