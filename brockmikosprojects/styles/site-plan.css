@@ -193,3 +193,10 @@ nav a:hover {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.workshowcase {
+  width: 100%;
+  height: auto;        /* pick whatever height works for your design */
+  object-fit: cover;    /* scale & crop to fill the box */
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

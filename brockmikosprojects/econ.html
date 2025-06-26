@@ -17,9 +17,30 @@
 
     <main>
         <hr>
-
-        
-        </hr>
+          <h2>Modeling the Impact of COVID-19 Migrations on U.S. Housing Prices</h2>
+          <h3>Project Summary</h3>
+          <p>Our econometrics project investigates the effect of COVID-19–era migration patterns on housing prices across different U.S. regions. Motivated by the widely observed shift in population flows away from urban centers toward suburban and rural areas during the pandemic, we sought to quantify how these demographic changes translated into real estate price movements. Using a panel dataset covering 217 U.S. cities across the years 2012, 2015, 2020, and 2023, we examined key variables such as price per square foot, inventory levels, home sales, and population estimates. To isolate the impacts of population shifts and pandemic dynamics, we employed both OLS and instrumental variable regressions, ultimately opting for a log-log specification.</p>
+          <p>Despite the prevailing narrative that COVID-19 accelerated demand and drove up housing prices in certain regions, our empirical model found that variables like logged population and pandemic timing did not reach statistical significance in explaining price variation. Instead, more robust relationships emerged between housing prices and regional location, with the West consistently showing stronger price appreciation. The mortgage crisis of 2012 also surfaced as a significant negative driver of prices. While our initial goal of confirming a direct COVID-price linkage was inconclusive, our work highlights the complexity of real estate price dynamics and suggests promising avenues for future research. Below is the output of our regression model.</p>
+          <hr>
+          <h3>Regression Output</h3>
+          <img class="econpage-img" src="images/econreg.png" alt="econ img">
+          <p>The table above highlights which variables were statistically significant in our regression model. Among them, the mortgage variable used as a proxy for the mortgage crisis stands out as a key driver. In addition, all of the regional indicators emerged as significant, suggesting that geographic location played a critical role in explaining housing price variation. According to our dataset, these were the only variables with a meaningful impact on housing prices, indicating that both historical financial disruptions and regional differences were the most influential factors.</p>
+          <hr>
+          <h3>Disease Testing</h3>
+          <p>To ensure the reliability and validity of our regression model, we conducted a series of diagnostic tests. Initially, we found evidence of heteroskedasticity, indicating non-constant variance in the error terms. To address this, we used robust standard errors to obtain valid inference. We also detected autocorrelation, likely due to the time-series nature of our panel data, which we corrected using Newey-West standard errors. The Ramsey RESET test revealed potential model misspecification, prompting us to log-transform both population and price variables. This transformation significantly improved the model’s performance, though some mild misspecification remained. Finally, we used the Durbin-Wu-Hausman test to check for endogeneity, which confirmed that our OLS estimates were inconsistent. As a result, we implemented an instrumental variables (IV) regression, using the number of home sales as an instrument for average inventory. This approach satisfied relevance and exogeneity requirements, producing a more robust and interpretable model.</p>
+          <hr>
+          <h3>Data Visualizations</h3>
+          <p>Throughout our analysis, we used a variety of graphs to explore the relationships in our dataset. A U.S. map with plotted cities helped illustrate regional coverage, while scatterplots revealed an exponential relationship between population and sales, and a less direct connection between population and price per square foot. A heatmap and time trend graphs showcased the rapid price increases in Western states compared to other regions. These visual tools not only supported our regression results but also highlighted patterns that may guide future investigation.</p>
+          <div class="grid-container">
+          <img class="workshowcase" src="images/econ1.png" alt="econ cities">
+          <img class="workshowcase" src="images/econ2.png" alt="econ 2">
+          <img class="workshowcase" src="images/econ3.png" alt="econ 3">
+          <img class="workshowcase" src="images/econ4.png" alt="econ 4">
+          </div>
+          <hr>
+          <h3>Limitations and Future Research</h3>
+          <p>While our model reveals important regional and historical influences on housing prices, it has limitations. Notably, some potentially relevant variables like remote work trends, local zoning laws, or migration motivations were not available at a city specific level. In addition, the COVID dummy variable may not fully capture the nuanced timing and geographic variability of pandemic related effects. Future research could benefit from higher frequency data, additional covariates, and deeper exploration into metro vs. micropolitan areas. More granular year-over-year data from 2018–2024 may also help uncover short-term shifts not fully captured in our panel.</p>
+        <hr>
     </main>
   <footer>
         <p>Brock Mikos Portfolio &copy; 2025 - Brock Mikos</p>
